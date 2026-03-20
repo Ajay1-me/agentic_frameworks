@@ -24,13 +24,14 @@ from dotenv import load_dotenv
 # - Task: defines a specific piece of work assigned to an agent
 # - Crew: orchestrates the execution of multiple tasks/agents
 # - Process: controls how tasks are run (sequential is easiest to start with)
-# - LLM: lets us explicitly define which model/backend to use
+
 from crewai import Agent, Task, Crew, Process, LLM
 
 
 # Load environment variables from .env into the current process
 load_dotenv()
 
+# LLM setup
 def build_llm() -> LLM:
     
     model = os.getenv("MODEL")
@@ -170,7 +171,7 @@ def run_demo(topic: str):
 
 
 if __name__ == "__main__":
-    # Change this topic whenever you want to test a different input.
+    # test a different input here
     topic = "Agentic AI frameworks for beginner prototyping"
 
     run_demo(topic)

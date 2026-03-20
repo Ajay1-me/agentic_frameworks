@@ -6,4 +6,7 @@ langchain-ollama
 
 autogen-agentchat
 
+autogen-agentchat
+autogen-ext[openai]
+
 python-dotenv
