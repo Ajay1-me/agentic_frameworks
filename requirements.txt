@@ -1,0 +1,9 @@
+crewai
+
+langgraph
+langchain
+langchain-ollama
+
+autogen-agentchat
+
+python-dotenv
