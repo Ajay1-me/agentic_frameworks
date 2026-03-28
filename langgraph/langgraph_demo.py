@@ -1,12 +1,6 @@
 """
 LangGraph demo using a local Ollama model.
-
-What we're trying to do here:
-- Take a topic
-- Generate 5 key points about it
-- Turn that into a clean final response with follow-up questions
-
-This is just to understand how LangGraph works:
+This is just to understand how LangGraph works using a basic workflow
 state -> nodes -> flow
 """
 
@@ -92,7 +86,7 @@ def parse_request_node(state: GraphState):
     }
 
 
-# Node 2: Mock ride options (no API needed)
+# Node 2: Mock ride options (try using an API approach)
 def fetch_options_node(state: GraphState):
     options = [
         {"service": "UberX", "price": 29, "eta": 6},
@@ -272,11 +266,7 @@ if __name__ == "__main__":
 
 """
 
-# ---------------------------
-# Shared state
-# ---------------------------
-# Think of this like a shared "data object" that moves through the graph.
-# Every node can read from it and update parts of it.
+
 
 class GraphState(TypedDict):
     topic: str

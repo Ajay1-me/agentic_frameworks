@@ -119,7 +119,7 @@ def run_workflow_1(model: LLM, topic: str):
     return crew.kickoff()
 
 
-# Workflow 2 contains Advanced incident response workflow, Multiple specialized agents
+# Workflow 2 contains incident response workflow, Multiple specialized agents
 # and demonstrates task dependency and more realistic orchestration
 def build_agents_wf2(shared_llm: LLM):
     incident_analyst = Agent(
